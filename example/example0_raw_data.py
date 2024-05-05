@@ -28,7 +28,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-from MPU6050 import MPU6050
+from mpu6050 import MPU6050
 
 i2c_bus = 1
 device_address = 0x68
@@ -67,9 +67,9 @@ while True: # infinite loop
 
         # DMP acceleration (less noisy acceleration - based on fusion)
         accel_dmp = mpu.DMP_get_acceleration_int16(FIFO_buffer)
-        Ax_dmp = accel_dmp.x * 2*g / 2**15
-        Ay_dmp = accel_dmp.y * 2*g / 2**15
-        Az_dmp = accel_dmp.z * 2*g / 2**15
+        Ax_dmp = accel_dmp.x * 2*g / 2**15 * 2
+        Ay_dmp = accel_dmp.y * 2*g / 2**15 * 2
+        Az_dmp = accel_dmp.z * 2*g / 2**15 * 2
 
         # raw gyro (full range: [-250, +250]) (unit: degree / second)
         gyro = mpu.get_rotation()

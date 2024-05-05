@@ -28,7 +28,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-from MPU6050 import MPU6050
+from mpu6050 import MPU6050
 
 i2c_bus = 1
 device_address = 0x68
@@ -75,4 +75,5 @@ while True: # infinite loop
 
         ### About DMP frequency ###
         # For optimal results in INS (Inertial Navigation System), it is advisable to set the frequency of the Digital Motion Processor (DMP) to 40 Hz or lower.
-        # This configuration yields a less noisy quaternion vector and reduces the occurrence of FIFO overflows
+        # This configuration yields a less noisy quaternion vector and reduces the occurrence of FIFO overflows.
+        # Note that the "get_linear_accel" function can also be used for the acceleration vector provided by the DMP.
