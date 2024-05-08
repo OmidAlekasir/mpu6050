@@ -4,7 +4,9 @@ This library is primarily derived from the contributions of Geir Istad and has b
 
 To install this package, execute the following command:
 
-`pip install mpu6050`
+```
+pip install mpu6050
+```
 
 My main contributions to this library are towards enhancing the DMP results, providing detailed examples, describing the usage, and making the library pip-installable. Apart from the great work done by Geir Istad, there were some issues encountered in practice.
 
