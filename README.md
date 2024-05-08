@@ -64,7 +64,9 @@ Three examples are provided with detailed explanations on the calculations made 
 ### 5. Available on PyPI
 I am honored to state that this comprehensive library is now available on PyPI, encompassing all the features explained, which can be accessed by executing a simple command:
 
-`pip install mpu6050`
+```
+pip install mpu6050
+```
 
 This command will also install the 'quat' and 'smbus' libraries, which are essential for the proper functioning of the library.
 For more details on the 'quat' library, a concise library for working with quaternions and vectors (also developed by Geir Istad), please refer to the GitHub repository [quat](https://github.com/OmidAlek/quat).
